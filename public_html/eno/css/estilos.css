@@ -1,0 +1,2511 @@
+/*estructura de pantalla y contenedor*/
+/*general del BODY*/
+html{
+  font-size: 10px;
+}
+
+body, p, ul, li, a {
+  margin: 0px auto;
+  padding: 0px;
+  font-family: 'Cardo', sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+a{
+  text-decoration: none;
+}
+
+h1{
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 6rem;
+  text-transform: uppercase;
+  color:white;
+  width: 100%;
+  text-align: center;
+  margin:0;
+  padding:0;
+  margin-bottom: 60px;
+  position: relative;
+}
+h2, h3, h4, h5, h6{
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  margin:0;
+  padding:0;
+}
+
+section{
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  margin:0px auto;
+  padding:0px;
+}
+
+hr.separador{
+  outline: none;
+  border:none;
+  background-color: #949494;
+  width: 100%;
+  height: 1px;
+}
+
+#pantalla {
+width:100%;
+max-width: 100%;
+height:auto;
+position:relative;
+overflow: hidden;
+float:left;
+margin: 0px auto;
+padding: 0;
+}
+
+#contenedor{
+	width: 1170px;
+  max-width: 95%;
+	height: auto;
+	position: relative;
+  margin: 0px auto;
+  padding: 0;
+  overflow: hidden;
+ /* background-color: rgba(50,145,203,.5);*/
+}
+
+
+/*-----------------------------*/
+/*-------------HEADER  1----------------*/
+header{
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top:0;
+  margin:0px auto;
+  z-index: 20;
+  padding:20px 0px;
+  padding-bottom: 30px;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0));
+}
+
+header h1.logo{
+  width: 390px;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  margin:0;
+  padding: 0px;
+  display: inline-block;
+  vertical-align: top;
+}
+header h1.logo img{
+  width: 100%;
+  height: auto;
+}
+
+header h1.logo img:nth-of-type(2){
+  display: none;
+}
+
+header div#contenedor{
+  overflow: visible;
+}
+
+
+
+
+div.eleccion{
+  width: 200px;
+  height: auto;
+  position: relative;
+  overflow: visible;
+  display: inline-block;
+  vertical-align: top;
+  margin:0px 30px;
+  margin-left: 100px;
+  margin-top: 20px;
+
+  display: none;
+}
+
+div.eleccion a.ver{
+  padding: 10px 10px;
+  background-color: #8FD6E5;
+  color:white;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size: 21px;
+  display: block;
+  text-align: center;
+  border-radius: 10px;
+  transition:.5s;
+}
+
+div.eleccion a.ver:hover{
+  background: #CCCCCC;
+  transition:.5s;
+}
+
+div.eleccion button,
+div.eleccion label{
+  background:transparent;
+  border:0;
+  outline: 0;
+  padding:5px 0px;
+  margin:0;
+  color:#8FD6E5;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size:16px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+div.eleccion button{
+  margin-left: 20px;
+}
+div.eleccion button:hover,
+div.eleccion label:hover{
+  color:#CCCCCC;
+  transition: .5s;
+}
+  
+div.eleccion label img{
+  height: 20px;
+}
+
+div.eleccion label img:nth-of-type(1){
+display: none;
+}
+
+div.eleccion label img:nth-of-type(2){
+display: inline-block;
+margin-right: 5px;
+}
+
+div.eleccion div.log{
+  display: block;
+  padding:0;
+  background-color: rgba(255,255,255,.6);
+  border-radius: 10px;
+  margin:0px auto;
+  margin-top: 10px;
+  position: absolute;
+  z-index: 20; 
+  width: 96%;
+  height: 0px;
+  overflow: hidden;
+  transition: .5s;
+  opacity: 0;
+}
+
+div.eleccion div.log.abierto{
+  height: auto;
+  padding:30px 10px;
+  padding-bottom:0;
+  opacity: 1;
+  transition: .5s;
+}
+
+div.eleccion div.log input{
+  width: 90%;
+  padding:2.5% 5%;
+  background-color: #EDEDED;
+  color:#8FD6E5;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size:14px;
+  border:0;
+  outline:0;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+div.eleccion div.log input::placeholder{
+  color:#8FD6E5;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size:14px;
+}
+
+div.eleccion div.log input.submit{
+    width: auto;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    color: gray;
+    float: right;
+    padding: 10px;
+    font-size: 15px;
+    line-height: 100%;
+    border-radius: 10px;
+    background: #8FD6E5;
+}
+div.eleccion div.log input.submit:hover{
+  color:white;
+  transition: .5s;
+  background: gray;
+}
+
+
+
+
+header nav{
+  width: 600px;
+  height: auto;
+  position: relative;
+  margin:0;
+  padding:0;
+  float: right;
+  top:20px;
+}
+
+header nav div.eleccion,
+header nav div.redes{
+  display: none;
+}
+
+header.primer-scroll nav div.eleccion,
+header.primer-scroll nav div.redes{
+  display: none;
+}
+
+header nav ul{
+  list-style: none;
+}
+
+header nav ul div.linea{
+  width: 2px;
+  height: 21px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 10px;
+  background-color: white;
+}
+
+header nav ul li{
+  width: auto;
+  height: auto;
+  padding:0px 19px;
+  list-style: none;
+  margin:0;
+  color:white;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size: 26px;
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+  position: relative;
+}
+
+header nav ul li.desplegable{
+  padding-right: 35px;
+}
+header nav ul li.desplegable:after{
+    content: '';
+    width: 15px;
+    height: 15px;
+    border: 4px solid white;
+    border-top: 0;
+    border-left: 0;
+    border-radius: 25%;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 0;
+    bottom: 11px;
+    margin-right: 10px;
+}
+
+header nav ul li:first-of-type{
+  padding-left: 0;
+}
+header nav ul li:nth-of-type(3){
+  padding-right: 55px;
+}
+header nav ul li:last-of-type{
+  padding-right: 0;
+}
+header nav ul li a{
+  color:white;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size: 26px;
+  display: block;
+  transition: .5s;
+}
+header nav ul li a:hover{
+  color:#8FD6E5;
+  transition: .5s;
+}
+
+
+header nav ul li.desplegable:hover span{
+  height: auto;
+  transition: .5s;
+  opacity: 1;
+}
+header nav ul li span{
+  height: 0px;
+  overflow: hidden;
+  display: block;
+  padding:0px 15px;
+  background-color: rgba(255,255,255,.6);
+  border-radius: 10px;
+  margin-top: 0px;
+  position: absolute;
+  z-index: 20;
+  transition: .5s;
+  opacity: 0;
+}
+
+header nav ul li span a{
+  font-size: 20px;
+  padding:10px 0px;
+  border-bottom: solid 2px white;
+}
+
+header nav ul li span a:last-of-type{
+  border: 0;
+}
+
+
+
+header div.redes{
+  width: auto;
+  position: absolute;
+  right: 20px;
+  bottom:-10px;
+}
+
+header div.redes a{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+header div.redes a div.boton-redes{
+  width: 21px;
+  height: 21px;
+  margin:0px 10px;
+  margin-right: 0;
+  vertical-align: middle;
+}
+
+header div.redes a div.boton-redes.face{
+  background: url(../img/facebook.png) no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+}
+header div.redes a div.boton-redes.twitt{
+  background: url(../img/twitter.png) no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+}
+header div.redes a div.boton-redes.insta{
+  background: url(../img/instagram.png) no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+}
+
+header div.redes a div.boton-redes:hover{
+  opacity: .5;
+}
+
+header div.redes a.ingles{
+  color:#fff;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size:14px;  
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+/*--colores interior--*/
+header.interior{
+  background-image: none;
+  background-color:white;
+  position: fixed;
+}
+
+header.interior nav{
+  transition: 0;
+}
+header.interior nav li,
+header.interior nav li a,
+header.interior nav li span a{
+  color:#7BA4CC;
+}
+
+
+header.interior nav ul li.desplegable:after{
+    content: '';
+    width: 12px;
+    height: 12px;
+    border: 4px solid #7BA4CC;
+    border-top: 0;
+    border-left: 0;
+    border-radius: 25%;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 0;
+    bottom: 9px;
+}
+
+header.interior nav li:hover,
+header.interior nav li a:hover{
+  color:#9FC18F;
+}
+
+header.interior nav ul li.desplegable:hover:after{
+  border: 4px solid #9FC18F;
+      border-top: 0;
+    border-left: 0;
+  }
+
+header.interior nav ul li span a {
+    border-bottom: solid 1px #7BA4CC;
+}
+
+header.interior nav ul li span a:last-of-type{
+  border:0;
+}
+
+header.interior div.redes a div.boton-redes.face{
+  background: url(../img/facebook-footerhover.png) no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+}
+header.interior div.redes a div.boton-redes.twitt{
+  background: url(../img/twitter-footerhover.png) no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+}
+header.interior div.redes a div.boton-redes.insta{
+  background: url(../img/instagram-footerhover.png) no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+}
+
+header.interior div.redes a.ingles{
+  color:#8FD6E5;
+}
+
+/*-hamburguesa-*/
+header div.hamburguesa{
+  display: none;
+}
+
+header.primer-scroll div.hamburguesa{
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  margin-top: 50px;
+  margin-left: 40px;
+  cursor: pointer;
+}
+
+header.primer-scroll div.hamburguesa hr{
+  width: auto;
+  height: 4px;
+  background-color: #9FC18F;
+  border:0;
+  border-radius: 10px;
+  margin:0;
+  padding:0;
+  margin-bottom:5px;
+  transition:.5s;
+}
+
+header.primer-scroll div.hamburguesa.hamburcruz hr:nth-of-type(1){
+  transform: rotate(45deg);
+  margin-top:12px;
+  transition:.5s;
+}
+header.primer-scroll div.hamburguesa.hamburcruz hr:nth-of-type(2){
+  transform: rotate(-45deg);
+  margin-top:-9px;
+  transition:.5s;
+}
+header.primer-scroll div.hamburguesa.hamburcruz hr:nth-of-type(3){
+  opacity:0;
+  transition:.5s;
+}
+
+header.primer-scroll div.hamburguesa:hover hr{
+   background-color: #7BA5CD; 
+}
+
+/*--segundo scroll--*/
+header.primer-scroll{
+  position: fixed;
+  height: 100px;
+  top:0;
+  padding:0;
+  padding-bottom:10px;
+  transition:.5s;
+  background-color: white;
+}
+
+header.primer-scroll:after{
+  content: '';
+  width: 100%;
+  height: 10px;
+  background-image: linear-gradient(to right, #6EAF52 , #6AA3EE);
+  position: absolute;
+  bottom:-8px;
+}
+
+header.primer-scroll h1{
+  width: 250px;
+  padding:5px 0px;
+}
+
+header.primer-scroll nav{
+  position: fixed;
+  width: 250px;
+  top:117px;
+  left:-500px;
+  bottom:0;
+  z-index: 3;
+  padding:20px;
+  padding-left:8%;
+  background-color: transparent;
+  transition: 1s;
+  overflow-y: scroll;
+  opacity: 0;
+}
+
+/* width */
+nav::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+nav::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+/* Handle */
+nav::-webkit-scrollbar-thumb {
+    background: #7BA5CD; 
+}
+
+/* Handle on hover */
+nav::-webkit-scrollbar-thumb:hover {
+    background: #9FC18F; 
+}
+
+header.primer-scroll nav.aparece{
+  left:0;
+  transition: 1s;
+  opacity: 1;
+  background: white;
+}
+
+header.primer-scroll nav ul li,
+header.primer-scroll nav ul li a{
+  width: 200px;
+  display: block;
+  padding-left:0;
+  padding-right: 0;
+  margin:0;
+  border:0;
+}
+
+header.primer-scroll nav ul li{
+  margin-bottom: 20px;
+}
+
+header.primer-scroll nav ul div.linea{
+  display: none;
+}
+header.primer-scroll nav ul li.desplegable:after{
+  top:5px;
+}
+
+header.primer-scroll nav ul li span{
+  position: relative;
+  height: auto;
+  opacity: 1;
+  padding:0;
+  margin:0;
+  padding-left:8%;
+}
+
+header.primer-scroll nav ul li span a{
+  opacity: .7;
+}
+header.primer-scroll nav ul li span a:hover{
+  opacity: 1;
+}
+
+header.primer-scroll div.eleccion{
+  width: auto;
+  margin:0;
+  margin-top: 25px;
+  display: inline-block;
+  margin-left: 200px;
+  margin-top:30px;
+}
+header.primer-scroll div.eleccion a.ver{
+  padding: 5px;
+  font-size: 15px;
+  width: auto;
+  border-radius: 6px;
+}
+
+header.primer-scroll div.eleccion a.ver:hover{
+  background: lightblue;
+}
+
+header.primer-scroll div.eleccion label#iniciar-sesion{
+  padding-left: 0;
+  color:#8FD6E5;
+  font-size: 12px;
+}
+
+header.primer-scroll div.eleccion label img {
+    height: 14px;
+    vertical-align: initial;
+    margin-right: 10px;
+}
+
+header.primer-scroll div.eleccion label img:nth-of-type(1){
+display: none;
+}
+
+header.primer-scroll div.eleccion label img:nth-of-type(2){
+display: inline-block;
+}
+
+header.primer-scroll div.eleccion button{
+  color:#8FD6E5;
+  font-size: 12px;
+}
+
+header.primer-scroll div.eleccion div.log{
+  width: 85%;
+  left:0%;
+}
+
+header.primer-scroll div.redes{
+    top:35px;
+}
+
+header.primer-scroll div.redes a.ingles{
+  display: block;
+  color:#8FD6E5;
+  margin-top:10px;
+  font-size: 12px;
+}
+
+
+
+
+section#login{
+  width: 100%;
+  height: 210px;
+  position: relative;
+  overflow: visible;
+  background:url(../img/fondo-laboratorio.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top:150px;
+}
+
+section#login div#contenedor{
+  overflow: visible;
+}
+
+section#login p{
+  display: inline-block;
+  vertical-align: middle;
+  width: 600px;
+  font-size: 41px;
+  color:white;
+  margin-left: 0;
+}
+
+section#login div.eleccion{
+    width: 200px;
+    height: auto;
+    position: relative;
+    overflow: visible;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0px 30px;
+    margin-left: 100px;
+    margin-top: 30px;
+}
+
+section#login div.vertical{
+  width: 1px;
+  height: 210px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+section#login div.eleccion button,
+section#login div.eleccion label{
+  color:white;
+}
+
+section#login div.eleccion button:hover,
+section#login div.eleccion label:hover{
+  opacity: .7;
+}
+
+
+section#login div.eleccion label img:nth-of-type(2){
+  display: none;
+}
+section#login div.eleccion label img:nth-of-type(1){
+  display: inline-block;
+}
+
+
+header.primer-scroll~section#login{
+  height: 150px;
+  transition: .3s;
+}
+
+
+/*-----------------------------*/
+/*-------------SLIDE----------------*/
+section#slide-home{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow:hidden;
+  margin:0px auto;
+}
+
+section#slide-home div.slide{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+section#slide-home div.slide  div.contenido{
+  position: relative;
+}
+
+section#slide-home div.slide  div.contenido p{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  overflow:hidden;
+  text-align: center;
+  font-family: 'Cardo',sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 4rem;
+  color:white;
+  bottom:20vh;
+  z-index: 2;
+}
+
+section#slide-home div.slide div.contenido img{
+  width: 100%;
+  height: 100vh;
+  object-position: center;
+  object-fit: cover;
+}
+
+/*-----------------------------*/
+/*------------3 botones home----------------*/
+section#botones-3{
+  padding:100px 0px;
+  overflow: visible;
+}
+
+section#botones-3 div#contenedor{
+  overflow: visible;  
+  text-align: center;
+}
+
+section#botones-3 a{
+
+}
+
+section#botones-3 a div.boton{
+  width: 234px;
+  height: auto;
+  padding:10px 30px;
+  border-radius: 15px;
+  margin:0px 20px;
+  background-color: #7BA4CC;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  transition:.5s;
+}
+
+
+section#botones-3 a div.boton h3{
+  font-size: 23px;
+  color:white;
+  line-height: 26px;
+  margin-top: 10px;
+}
+section#botones-3 a div.boton h5{
+  font-size: 12px;
+  color:white;
+  line-height: 23px;
+}
+
+section#botones-3 a div.boton:hover{
+  background-color: #9FC18F;
+  transform: scale(1.1);
+  transition:.5s;
+}
+
+
+
+
+/*-----------------------------*/
+/*-------------CONTACTO----------------*/
+section#contacto{
+  padding:60px 0px;
+  margin:0;
+  background: url(../img/contacto.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+section#contacto form{
+  width: 100%;
+  height: auto;
+}
+
+section#contacto form div.izq,
+section#contacto form div.der{
+  width: 50%;
+  height: auto;
+  position: relative;
+  float: left;
+  margin:0px;
+  padding:0;
+}
+
+section#contacto form div.der{
+  float:right;
+}
+
+section#contacto form input,
+section#contacto form textarea{
+  width: 92%;
+  height: auto;
+  padding:2.5%;
+  color:white;
+  background-color: rgba(255,255,255,.5);
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: 'Cardo', sans-serif;
+  border:0;
+  outline: none;
+  margin-bottom:35px;
+}
+
+section#contacto form textarea{
+  margin-left: 3%;
+  height: 110px;
+  margin-bottom:0;
+}
+
+section#contacto form input#enviar{
+  width: auto;
+  padding:10px 90px;
+  float: right;
+  margin-top: 35px;
+  background-color: #8FD6E5;
+  transition:.5s;
+  font-family: 'Oswald', sans-serif;
+  font-size: 26px;
+}
+
+section#contacto form input#enviar:hover{
+  background-color: rgba(255,255,255,.5);
+  transition:.5s;  
+}
+
+iframe{
+  width: 100%;
+  height: 350px;
+  margin:0px auto;
+  position: relative;
+  padding:0;
+  border:0;
+  outline:none;
+}
+
+section#contacto ::placeholder{
+font-size: 16px;
+  font-family: 'Cardo', sans-serif;
+  color:white; 
+}
+
+
+
+/*-----------------------------*/
+/*-------------FOOTER----------------*/
+footer{
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  clear: both;
+  padding:60px 0px;
+  margin:0px auto;
+  margin-top: -7px;
+  background-image: linear-gradient(to right, #6EAF52 , #6AA3EE);
+}
+
+footer article{
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: visible;
+  margin:0px auto;
+  margin-bottom: 30px;
+}
+
+footer article div{
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+footer article p.web,
+footer article nav{
+  display: inline-block;
+  vertical-align: bottom; 
+}
+
+footer article div.logo-footer{
+  width: 32%;
+  height: auto;
+}
+
+footer article p.web{
+  width: 32%;
+  height: auto;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  color:white;
+}
+footer article nav{
+  width: 32%;
+  text-align: right;
+  margin-bottom: -35px;
+}
+footer article nav a{
+  color:white;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-right: solid 2px white;
+}
+footer article nav a:hover{
+  color:#8FD6E5;
+  transition:.5s;
+}
+
+
+footer article nav a.ultima{
+  padding-right: 0;
+  border:0;
+}
+footer article nav span a{
+  border:0;
+  padding:0;
+}
+
+footer article nav span a div.boton-redes{
+  width: 26px;
+  height: 26px;
+  margin-top:8px;
+  margin-left: 10px;
+}
+
+footer article nav span a div.boton-redes.face{
+  background: url(../img/facebook.png) no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+}
+footer article nav span a div.boton-redes.twitt{
+  background: url(../img/twitter.png) no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+}
+footer article nav span a div.boton-redes.insta{
+  background: url(../img/instagram.png) no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+}
+
+footer article nav span a div.boton-redes.face:hover{
+  background: url(../img/facebook-footerhover.png) no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+}
+footer article nav span a div.boton-redes.twitt:hover{
+  background: url(../img/twitter-footerhover.png) no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+}
+footer article nav span a div.boton-redes.insta:hover{
+  background: url(../img/instagram-footerhover.png) no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+}
+
+footer article.footer-abajo{
+	margin-top: 40px;
+	margin-bottom: 0;
+}
+footer article.footer-abajo div{
+  text-align: center;
+  margin-right: 30px;
+}
+
+
+footer article.footer-abajo div:hover{
+  opacity: .5;
+}
+
+footer article.footer-abajo div p{
+  color:white;
+  font-size: 14px;
+}
+
+footer article.footer-abajo div.firma{
+  text-align: right;
+  width: 395px;
+}
+
+footer article.footer-abajo div.firma:hover{
+  opacity: 1;
+}
+
+footer article.footer-abajo div.firma h5{
+  font-size: 11px;
+  color:white;
+}
+
+
+
+/*-----------------------------*/
+/*-------------EMPRESA----------------*/
+section#institucional{
+  background: url(../img/empresa.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top:250px;
+  padding-bottom:100px;
+  text-align: center;
+  color:white;
+
+}
+section#institucional h1{
+  margin:0;
+  padding:10px 0px;
+  transition:0;
+}
+section#institucional p{
+  font-family: 'Cardo', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 28px;
+  transition:0;
+}
+
+/*-----------------------------*/
+/*-------------PROFESIONALES----------------*/
+section#profesionales{
+  padding: 60px 0px;
+}
+
+div.pro{
+  width: 290px;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
+  margin:0px 48px;
+} 
+
+div.pro img{
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+div.pro h4{
+  font-size: 26px;
+}
+
+div.pro h4 strong{
+  color:#7BA4CC;
+}
+
+div.pro h5{
+  font-family: 'Cardo', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 21px;
+  color:#949494;
+  margin-bottom:10px;
+}
+
+div.pro span{
+ font-family: 'Cardo', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 18px;
+  color:#949494; 
+}
+
+div.pro p{
+  font-family: 'Cardo', sans-serif;
+  font-weight: 400;
+  font-size: 16px;  
+}
+
+/*-otros pro-*/
+section#asesores{
+  padding:30px 0px;
+  padding-bottom:60px;
+}
+section#asesores div.botones-pro{
+  width: 378px;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
+  margin:0;
+  padding:0;
+  padding-right: 8px;
+}
+
+section#asesores div.botones-pro button{
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  margin:0;
+  padding:32px 0;
+  background-color: white;
+  outline: 0;
+  border:0;
+  border-bottom: solid 1px #949494;
+  font-size: 28px;
+  line-height: 36px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  color:#C7C7C7;
+  text-align: left;
+}
+
+section#asesores div.botones-pro button strong{
+  font-weight: 700;
+}
+
+section#asesores div.botones-pro button#boton-asesores-locales{
+  padding-top:0;
+}
+
+section#asesores div.botones-pro button#boton-admi{
+  border-bottom:0;
+  padding-bottom:0;
+}
+
+section#asesores div.pros{
+  width: 774px;
+    height: auto;
+    min-height: 346px;
+    border-left: 1px solid #949494;
+  position: absolute;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
+  margin-left:0px;
+  opacity: 0;
+  transition: 1s;
+  padding:0px;
+}
+
+section#asesores div.pros.activo{
+  position: relative;
+  height: auto;
+  opacity: 1;
+  transition: 1s;
+}
+
+section#asesores div.pros div.pro{
+  width: auto;
+  padding:0;
+  margin:0;
+}
+
+section#asesores div.pros div.pro img{
+  margin:0px 58px;
+  float: left;
+}
+
+section#asesores div.pros div.pro h4{
+  display: inline-block;
+  vertical-align: top;
+  margin:0;
+  margin-bottom:25px;
+  margin:0px 48px;
+}
+section#asesores div.pros div.pro h4 strong{
+  width: 290px;
+  color:#9FC18F;
+}
+
+section#asesores div.pros div.pro p{
+  width: 290px;
+  display: inline-block;
+  vertical-align: top;
+  margin:0px 47px;
+}
+
+section#asesores div.pros-lab div.pro{
+  width: 290px;
+  padding:0;
+  margin:0 47px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+section#asesores div.pros-lab div.pro img{
+  margin:0px auto;
+  float: none;
+}
+
+section#asesores div.pros-lab div.pro h4{
+  display: inline-block;
+  vertical-align: top;
+  margin:0;
+}
+section#asesores div.pros-lab div.pro h4 strong{
+  color:#9FC18F;
+}
+
+section#asesores div.pros-lab div.pro p{
+  width: 290px;
+  display: inline-block;
+  vertical-align: top;
+  margin:0;
+}
+
+
+/*-----------------------------*/
+/*-------------CLIENTES----------------*/
+section#clientes{
+  background: url(../img/clientes.jpg) no-repeat;
+  background-size: cover;
+  padding-top:250px;
+  padding-bottom:100px;
+  text-align: center;
+  color:white;
+}
+section#clientes h1{
+  margin:0;
+  padding:10px 0px;
+}
+section#clientes p{
+  font-family: 'Cardo', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 28px;
+}
+
+section#clientes-all{
+  padding:60px 0px;
+}
+
+section#clientes-all aside{
+  width: 346px;
+  height: auto;
+  padding: 40px 20px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
+  background-color: #9FC18F;
+  color:white;
+}
+
+section#clientes-all aside h3{
+  width: 100%;
+  text-align: center;
+  font-size: 23px;
+  padding-bottom:40px;
+}
+
+section#clientes-all aside ul{
+  padding:0 40px;
+  margin:0;
+}
+
+section#clientes-all aside ul li{
+  font-size: 18px;
+  line-height: 130%;
+  margin-bottom: 15px;
+}
+
+section#clientes-all article{
+  width: 676px;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
+  padding:40px 48px;
+  text-align: center;
+}
+
+section#clientes-all article h3{
+  font-size: 28px;
+  color:#9FC18F;
+  padding-bottom:30px;
+    font-weight: 700;
+}
+
+section#clientes-all article div{
+  width: 570px;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  margin:0px auto;
+  color:#ADADAD;
+  font-size: 28px;
+  line-height: 45px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  cursor:default;
+}
+
+section#clientes-all article div span,
+section#clientes-all article div span a{
+  font-size: 28px;
+  line-height: 45px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  color:#ADADAD;
+  transition:.5s;
+  cursor:default;
+  margin:0px 3px;
+}
+
+section#clientes-all article div span a{
+  cursor: pointer;
+}
+
+
+section#clientes-all article div span:hover,
+section#clientes-all article div span a:hover{
+  color:black;
+  transition:.5s;
+}
+
+
+/* 
+//////////////////////////////////////
+Las secciones de asesoramiento estan hechas con el mismo estilo de profesionales en institucionales.php, solo varia el div que los envuelve, cuidado al realizar o modificar los css
+////////////////////////////////////*/
+div.asesoramientos-3{
+  height: 0px;
+  opacity: 0;
+  position: relative;
+  overflow: hidden;
+  top:0;
+  left:0;
+  transition: 1s;
+}
+
+
+
+.asesoramientos-3.ready{
+  height: auto;
+  position: relative;
+  opacity: 1;
+  transition: 1s;
+}
+
+section#los-3-tipos-de-asesoramiento section#institucional{
+  padding-top:100px;
+}
+
+section#los-3-tipos-de-asesoramiento div#asesoramiento-viticola section#institucional{
+  background: url(../img/asesoramientoviticola.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+section#los-3-tipos-de-asesoramiento div#laboratorio-de-analisis section#institucional{
+  background: url(../img/laboratorio.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+section#los-3-tipos-de-asesoramiento div#asesoramiento-enologico section#institucional{
+  background: url(../img/asesoramiento-enologico.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+div.asesoramientos-3 section#asesores div.pros{
+    width: 600px;
+    padding: 0px 85px;
+    height: auto;
+    min-height: 346px;
+    border-left: 1px solid #949494;
+}
+
+div.asesoramientos-3 section#asesores div.pros div.pro{
+  width: 100%;
+  padding:0px;
+  margin:0;
+}
+div.asesoramientos-3 section#asesores div.pros div.pro p{
+  display: block;
+  width: 100%;
+  margin:0;
+  padding:0;
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+section.botones-asesores{
+  padding-top:60px;
+  padding-bottom:10px;
+  margin:0px auto;
+  text-align: center;
+  border-bottom:20px solid #9FC18F;
+}
+
+section.botones-asesores div#contenedor{
+  overflow: visible;
+  margin-bottom: -3px;
+}
+
+section.botones-asesores label{
+  width: auto;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  padding:10px 30px;
+  background-color: #7BA5CD;
+  margin:0px 30px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color:white;
+  border-radius: 20px 20px 0px 0px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+
+
+
+/*LAB*/
+section#clientes-all.formulario-log-in aside{
+  width: 386px;
+  height: auto;
+  padding: 0px;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
+  background-color: #fff;
+  color:white;
+  border-radius: 0;
+}
+
+section#clientes-all.formulario-log-in aside div.tipos-de-analisis{
+  background: #2E404F;
+  padding: 40px 20px;
+  border-radius: 10px;
+  width: 346px;
+}
+
+section#clientes-all.formulario-log-in aside div.descarga{
+  margin-top: 50px;
+}
+
+section#clientes-all.formulario-log-in aside div.descarga img{
+  transition: .3s;
+}
+
+section#clientes-all.formulario-log-in aside div.descarga h4{
+  font-size: 24px;
+  color:#2E404F;
+  font-weight: 300;
+  transition: .3s;
+}
+
+section#clientes-all.formulario-log-in aside div.descarga h4 strong{
+  font-weight: 700;
+}
+
+section#clientes-all.formulario-log-in aside div.descarga a:hover img{
+  filter: grayscale(100%);
+  opacity: .4;
+  transition: .3s;
+}
+
+section#clientes-all.formulario-log-in aside div.descarga a:hover h4{
+  color:gray;
+  transition: .3s;
+}
+
+
+section#clientes-all.formulario-log-in article{
+  width: 676px;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
+  padding:0px 48px;
+  text-align: left;
+}
+
+section#clientes-all.formulario-log-in article h3{
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  font-size: 35px;
+  color:#9FC18F;
+  padding-bottom:30px;
+    font-weight: 300;
+    margin:0;
+    padding:0;
+}
+
+section#clientes-all.formulario-log-in article h3.celeste{
+  color:#7BA4CC;
+  margin-top: 110px;
+}
+
+section#clientes-all.formulario-log-in article input{
+  width: 96%;
+  height: auto;
+  padding:2%;
+  background-color: #7F7F7F;
+  border:solid 1px #7F7F7F;
+  color:white;
+  margin-top: 30px;
+  border:0;
+  border-radius: 10px;
+  outline: none;
+  transition: .3s;
+}
+
+section#clientes-all.formulario-log-in article input:focus{
+  background-color: white;
+  border:solid 1px #2E404F;
+  color:#2E404F;
+}
+
+section#clientes-all.formulario-log-in article input::placeholder{
+  color:white;
+}
+
+section#clientes-all.formulario-log-in article input[type="submit"]{
+  width: 160px;
+  position: relative;
+  float: right;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  color:white; 
+  font-size: 20px;
+  border:solid 1px #7F7F7F;
+}
+
+section#clientes-all.formulario-log-in article input[type="submit"]:hover{
+  border:solid 1px #2E404F;
+  color:#2E404F;
+  background-color: white;
+}
+
+section#clientes-all.formulario-log-in article span{
+  position: relative;
+  float: left;
+  text-align: left;
+  font-size: 16px;
+  color:#363636;
+  vertical-align: middle;
+  margin-top: 40px;
+  padding:0;
+}
+
+section#clientes-all.formulario-log-in article span input{
+  display: inline-block;
+  vertical-align: bottom;
+  width: 25px;
+  height: 25px;
+  background: transparent;
+  border:solid 1px #363636;
+  margin:0;
+  margin-right: 10px;
+}
+
+
+
+
+ @media only screen and (max-width : 1250px) {
+  #contenedor{
+    width: 900px;
+  }
+
+  header nav {
+    width: auto;
+	}
+	header nav ul li {
+		padding:0px 5px;
+		font-size: 19px;
+	}
+	header nav ul li a{
+		font-size: 19px;
+	}
+
+	header nav ul div.linea {
+	    width: 2px;
+	    height: 19px;
+	    margin-top: 5px;
+	}
+
+	header nav ul li:nth-of-type(3) {
+	    padding-right: 35px;
+	}
+
+	header nav ul li.desplegable:after {
+	    width: 12px;
+	    height: 12px;
+	    border: 3px solid white;
+	    border-top: 0;
+	    border-left: 0;
+	    bottom: 9px;
+	    margin-right: 5px;
+	}
+
+	header nav ul li span a {
+	    font-size: 16px;
+	    padding: 7px 0px;
+	    border-bottom: solid 1px white;
+	}
+
+	header div.redes {
+	    right: 0px;
+	    bottom: 15px;
+	}
+
+	section#botones-3 a div.boton {
+	    width: 30%;
+	    margin:0;
+	    padding:10px 0px;
+	}
+
+	section#botones-3 a:nth-of-type(2) div.boton{
+		margin:0px 2.9%;
+	} 
+
+
+	section#login p {
+		width: auto;
+	}
+
+	section.botones-asesores label{
+		font-size: 16px;
+		margin: 0px 10px;
+		margin-bottom: 30px;
+	}
+
+	div.asesoramientos-3 section#asesores div.pros,
+	section#clientes-all.formulario-log-in article,
+	section#clientes-all article {
+    width: 420px;
+    padding: 0px 40px;
+	}
+
+	div.pro,
+	section#asesores div.pros div.pro {
+	    width: 260px;
+	    margin:0;
+	}
+
+	section#profesionales div#contenedor div.pro:nth-of-type(2){
+		margin:0px 55px;
+	}
+
+	div.pro img{
+		width: 100%;
+		height: auto;
+		margin:0px auto;
+	}
+
+	section#asesores div.pros{
+		width: auto;
+	}
+	section#asesores div.pros.activo{
+		padding-left: 25px;
+	}
+
+	section#asesores div.botones-pro {
+	    width: 275px;
+	}
+
+	section#asesores div.pros div.pro img{
+		margin:0px auto;
+		float: none;
+	}
+
+	section#asesores div.pros div.pro h4{
+		margin-left: 0;
+		margin-right: 0;
+	}
+section#asesores div.pros div.pro p{
+		margin-left: 0;
+		margin-right: 0;
+		width: 95%;
+	}
+
+	section#asesores div.pros div.pro:nth-of-type(2){
+		margin-left: 60px;
+	}
+
+
+	section#clientes-all article h3 {
+  	  width: 70%;
+  	  text-align: center;
+  	  margin-left: auto;
+  	  margin-right: auto;
+	}
+
+	section#clientes-all article div{
+		width: 100%;
+		font-size: 26px;
+   		line-height: 32px;
+	}
+
+	section#clientes-all article div span{
+		font-size: 26px;
+   		line-height: 32px;
+	}
+
+	section#clientes-all article{
+		padding:40px;
+	}
+
+
+
+  footer article p.web{
+    float: right;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+  }
+
+  footer article nav {
+    width: auto;
+    text-align: right;
+    margin-bottom: 0;
+    float: right;
+    top: 50px;
+    right: 0;
+    position: absolute;
+  }
+
+  footer article.footer-abajo{
+    margin:0;
+  }
+
+  footer article.footer-abajo div{
+    text-align: left;
+    display: block;
+    margin-bottom:10px;
+  }
+  footer article.footer-abajo div img,
+  footer article.footer-abajo div p{
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  footer article.footer-abajo div.firma {
+    text-align: right;
+    position: absolute;
+    width: auto;
+    bottom: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  footer article.footer-abajo div p{
+    font-size: 16px;
+  }
+}
+
+
+
+
+
+
+
+
+
+ @media only screen and (max-width : 910px) {
+  #contenedor{
+    width: 750px;
+  }
+
+  header h1.logo {
+    width: 320px;
+  }
+
+  header.primer-scroll div.hamburguesa{
+  	margin-left:20px;
+  }
+
+  header.primer-scroll div.eleccion{
+  	margin-left:50px;
+  }
+	section#login p{
+		font-size: 36px;
+		margin-right: 30px;
+	}
+	section#login div.eleccion{
+		margin-left:0;
+		margin-right:0;
+	}
+
+	section.botones-asesores label{
+		padding:10px 20px;
+	}
+
+	div.asesoramientos-3 section#asesores div.pros, section#clientes-all.formulario-log-in article, section#clientes-all article{
+		padding-right: 0;
+	}
+
+	section#clientes-all.formulario-log-in aside{
+		width: 300px;
+	}
+
+	section#clientes-all.formulario-log-in aside div.tipos-de-analisis{
+		padding: 40px 2%;
+	    border-radius: 10px;
+	    width: 96%;
+	}
+
+	div.asesoramientos-3 section#asesores div.pros, section#clientes-all.formulario-log-in article, section#clientes-all article{
+		width: 400px;
+	}
+
+	section#profesionales div#contenedor div.pro:nth-of-type(2){
+		margin:0px 25px;
+	}
+
+	div.pro, section#asesores div.pros div.pro{
+		width: 230px;
+	}
+
+	section#asesores div.botones-pro{
+		width: 230px;
+	}
+	section#asesores div.pros.activo{
+		padding-left: 15px;
+	}
+
+	section#asesores div.pros div.pro:nth-of-type(2) {
+    	margin-left: 25px;
+	}
+
+
+	section#clientes-all aside{
+		width: 270px;
+		padding:40px 2%;
+	}
+}
+
+
+
+ @media only screen and (max-width : 876px) {
+section#slide-home div.slide div.contenido p {
+    width: 60%;
+    font-size: 3rem;
+    padding: 0px 20%;
+}
+}
+
+
+
+
+
+
+ @media only screen and (max-width : 806px) {
+  #contenedor{
+    width: 600px;
+  }
+
+
+  body, p, ul, li, a {
+  font-size: 1.4rem;
+}
+
+h1{
+  font-size: 4rem;
+  margin-bottom: 30px;
+}
+
+  header h1.logo{
+  	width: 70%;
+    margin:0px auto;
+    display: block;
+  }
+
+  header nav{
+    float: none;
+    top:0;
+  }
+
+  header div.redes{
+    bottom:0px;
+  }
+
+  header.primer-scroll h1{
+    width: 50%;
+    margin-left:0;
+    display: inline-block;
+  }
+
+  header.primer-scroll div.hamburguesa{
+    margin-top:30px;
+  }
+
+  header.primer-scroll div.eleccion{
+    display: none;
+  }
+
+  header.primer-scroll nav div.eleccion{
+    display: block;
+    width: 170px;
+    margin:30px 0px;
+    padding:0;
+    position: relative;
+  }
+
+  header.primer-scroll nav div.eleccion div.log{
+    position: relative;
+    margin-top: 0;
+    background-color: lightgray;
+  }
+
+  header.primer-scroll nav div.redes{
+    display: block;
+    position: relative;
+    margin:0;
+    margin-bottom: 60px;
+    top:0;
+  }
+
+  section#slide-home div.slide div.contenido p{
+    font-size: 3rem;
+    width: 80%;
+    padding:0 10%;
+  }
+
+  .slick-prev, .slick-next {
+      bottom: 155px;
+      width: 20px;
+      height: 20px;
+      border: solid 4px white;
+      border-right: 0;
+      border-bottom: 0;
+      border-radius: 2px;
+  }
+
+  ul.slick-dots{
+    bottom:70px;
+  }
+
+  .slick-dots li, .slick-dots li button{
+    width: 20px;
+    height: 20px;
+  }
+
+  section#contacto form div.izq, section#contacto form div.der{
+    width: 100%;
+  }
+
+  section#contacto form input, section#contacto form textarea{
+    width: 95%;
+    margin-bottom: 15px;
+    margin-left:0;
+  }
+
+  section#contacto form input#enviar {
+    padding: 5px 60px;
+    margin-top: 0;
+    font-size: 22px;
+  }
+
+  section#login{
+    margin-top: 180px;
+    height: auto;
+    padding: 25px 0px;
+  }
+
+  section#login p {
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  section#login div.vertical{
+    display: none;
+  }
+
+  section#login div.eleccion{
+    margin:15px auto;
+    display: block;
+  }
+
+  header.primer-scroll~section#login{
+    height: auto;
+  }
+
+  section.botones-asesores label{
+    padding:5px 15px;
+  }
+
+  section.botones-asesores label {
+    padding: 15px 15px;
+    width: 120px;
+    display: inline-block;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: -18px;
+  }
+  section.botones-asesores{
+    padding-top:30px;
+  }
+
+  section#los-3-tipos-de-asesoramiento section#institucional {
+    padding-top: 150px;
+    height: auto;
+    min-height: 60vh;
+  }
+
+  section#institucional p br{
+    display: none;
+  }
+
+  section#asesores div.botones-pro {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  section#asesores div.botones-pro button,
+  section#asesores div.botones-pro button#boton-admi,
+  section#asesores div.botones-pro button#boton-asesores-locales {
+    width: 32.9%;
+    height: 130px;
+    position: relative;
+    overflow: hidden;
+    vertical-align: top;
+    margin: 0;
+    padding: 21px 2%;
+    border-bottom: solid 1px #949494;
+    font-size: 21px;
+    line-height: 30px;
+  }
+  div.asesoramientos-3 section#asesores div.pros, section#clientes-all.formulario-log-in article, section#clientes-all article{
+    width: 96%;
+    border: none;
+    margin: 0;
+    padding: 30px 2%;
+    padding-bottom: 0;
+  }
+
+  div.asesoramientos-3 section#asesores div.pros div.pro p {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 130%;
+    font-weight: 700;
+  }
+
+  section#clientes-all.formulario-log-in aside{
+    width: 100%;
+  }
+
+  section#clientes-all.formulario-log-in aside div.descarga{
+    text-align: center;
+    margin-bottom:50px;
+  }
+
+  section#clientes-all aside h3{
+    padding-bottom:20px;
+  }
+
+  section#clientes-all aside ul {
+    padding: 0 40px;
+    margin: 0;
+    column-count: 2;
+    overflow: visible;
+    height: auto;
+  }
+  section#clientes-all aside ul li {
+      font-size: 18px;
+      line-height: 130%;
+      margin-bottom: 15px;
+      overflow: visible;
+      margin-left: 20px;
+  }
+
+
+  div.pro, section#asesores div.pros div.pro,
+  section#profesionales div#contenedor div.pro:nth-of-type(2),
+  section#asesores div.pros div.pro:nth-of-type(2){
+        width: 300px;
+    display: block;
+    margin: 0px auto;
+    margin-bottom: 70px;
+  }
+
+  section#asesores{
+    padding:0;
+    padding-bottom:40px;
+  }
+
+  section#asesores div.pros,
+  section#asesores div.pros.activo{
+    margin: 0px auto;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    border: none;
+    padding-top:40px;
+  }
+
+  section#clientes-all aside{
+    width: 96%;
+    margin-bottom: 40px;
+  }
+
+  section#clientes-all article h3{
+    width: 100%;
+  }
+
+  section#clientes-all article div,
+  section#clientes-all article div span{
+    font-size: 22px;
+    line-height: 32px;
+  }
+
+  footer article p.web {
+    float: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    display: block;
+    margin-top:10px;
+  }
+
+  footer article nav {
+    width: auto;
+    text-align: left;
+    margin-bottom: 0;
+    float: none;
+    top: 20px;
+    right: 0;
+    left: -10px;
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 50px;
+}
+
+  footer article nav span{
+    margin-left: 15px;
+    padding-left: 10px;
+    border-left: 2px solid white;
+    display: inline-block;
+  }
+
+  footer article nav span a div.boton-redes{
+    margin-top:0;
+    width: 20px;
+    height: 20px;
+  }
+
+footer article nav br{
+  display: none;
+}
+
+footer article.footer-abajo div.firma {
+    text-align: left;
+    position: relative;
+    width: auto;
+    bottom: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    float: none;
+    margin-top: 40px;
+}
+
+section#botones-3{
+  padding:30px 0px;
+  padding-bottom:30px;
+}
+
+
+
+}
+
+
+ @media only screen and (max-width : 610px) {
+  #contenedor{
+    width: 100%;
+  }
+
+  h1{
+    font-size: 3rem;
+  }
+
+  header nav{
+    display: none;
+  }
+
+    header.primer-scroll nav{
+    display: inherit;
+  }
+
+  header h1.logo{
+    width: 90%;
+  }
+
+  header div.redes{
+    bottom:-40px;
+  }
+
+  header.primer-scroll{
+    height: 80px;
+  }
+
+  header.primer-scroll h1.logo{
+    width: 70%;
+    height: auto;
+    margin:0;
+    padding:0;
+  }
+  header.primer-scroll div.redes{
+    display: none;
+  }
+
+  header.primer-scroll div.hamburguesa{
+    float: right;
+    margin-top: 20px;
+  }
+
+  header.primer-scroll nav.aparece{
+    top:80px;
+  }
+
+  ul.slick-dots{
+    bottom:30px;
+  }
+
+  .slick-dots li, .slick-dots li button{
+    width: 15px;
+    height: 15px;
+  }
+
+  section#slide-home div.slide div.contenido p{
+    bottom:15vh;
+  }
+
+  section#slide-home div.slide div.contenido p {
+    font-size: 2.6rem;
+    width: 90%;
+    padding: 0 5%;
+  }
+
+  .slick-prev, .slick-next{
+    display: none !important;
+  }
+
+  section#botones-3 a div.boton,
+  section#botones-3 a:nth-of-type(2) div.boton {
+    width: 300px;
+    max-width: 85%;
+    margin: 0px auto;
+    padding:20px 0px;
+    margin-bottom: 30px;
+  }
+
+  section#contacto{
+    background-size: auto 120%;
+  }
+
+  section#login{
+    margin-top: 150px;
+  }
+
+  section#login p{
+    font-size: 23px;
+  }
+
+  section#clientes p br,
+  section#institucional p br {
+    display: none;
+  }
+
+  section#clientes p,
+  section#institucional p{
+    font-size: 23px;
+  }
+
+  div.eleccion div.log.abierto{
+    background-color: lightgray;
+  }
+
+  section.botones-asesores label{
+    width: 96%;
+    padding: 2%;
+    border-radius: 14px;
+    margin:0;
+    margin-bottom: 8px;
+  }
+
+  section#institucional p{
+    font-size: 23px;
+  }
+
+section#asesores div.botones-pro button, section#asesores div.botones-pro button#boton-admi, section#asesores div.botones-pro button#boton-asesores-locales{
+  width: 100%;
+  height: auto;
+  padding:10px 2%;
+}
+
+div.asesoramientos-3 section#asesores div.pros div.pro p{
+  font-size: 15px;
+}
+
+section#clientes-all aside ul{
+  column-count: 1;
+}
+
+section#clientes-all article h3{
+  font-size: 25px;
+}
+
+section#clientes-all.formulario-log-in article h3.celeste{
+  margin-top: 190px;
+}
+
+
+
+section#botones-3{
+  padding-bottom:0px;
+}
+
+}
+
+
+ @media only screen and (max-width : 470px) {
+  footer article nav span {
+    margin-left: 0px;
+    padding-left: 0px;
+    border-left: 0;
+    display: block;
+    margin-top: 15px;
+}
+
+footer article.footer-abajo>a>div p{
+  width: 230px;
+}
+
+ }
+
+
+ @media only screen and (max-width : 360px) {
+
+  footer article nav a,
+footer article nav a.ultima{
+  width: auto;
+  display: block;
+  margin: 10px;
+  padding-left:10px;
+  border:0;
+  border-left: solid 2px white;
+}
+
+footer article nav span {
+    margin-left: 10px;
+    padding-left: 0px;
+    border:none;
+    }
+footer article nav span a div.boton-redes{
+  margin-left: 0;
+}
+
+ }
+
+
+
+  section#contacto h5{
+    position: fixed;
+    top:0;
+    left:0;
+    right: 0;
+    height: auto;
+    padding:5px;
+    color:orange;
+    background: rgba(0,0,0,.6);
+    text-align: center;
+    z-index: -1;
+    font-size: 15px;
+    padding:10px;
+    animation-name:desaparece;
+    animation-duration: 10s;
+    animation-iteration-count: 1;
+    opacity: 0;
+  }
+
+  @keyframes desaparece {
+      0% {opacity: 1;z-index: 9999;}
+      80% {opacity: 1;z-index: 9999;}
+      100% {opacity: 0;z-index: 9999;}
+  }

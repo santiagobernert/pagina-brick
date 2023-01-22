@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Brick</title>
+	<!--[if lt IE 9]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+
+	<link href="img/icono.png" rel="shortcut icon" type="image/png" width="32px">
+
+<meta name="expires" content="text">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+<!--para buscadores-->
+<meta name="author" content="Brick" />
+<meta name="description" content="Web del estudio de diseño gráfico Brick Contenidos Editorial Soluciones Gráficas" />
+<meta name="keywords" content="diseño, diseño web, diseño editorial, editorial, gráfico, diseño gráfico, estudio de diseño, diseño mendoza, mendoza, libros, revistas, magazines, estudio de diseño en mendoza, Jimena Guzmán, Jimena Díaz, Eugenio Carozzo" />
+<meta name="robots" content="index, follow" />
+
+<!--si se ve bien em productos apple opngo lo siguiente-->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+
+	
+	<!-- CUIDADO: Respond.js no funciona si vemos la página de manera local -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<!-- Siempre se coloca primero normalize.css -->
+<link rel="stylesheet" href="css/normalize.css" type="text/css">
+<link rel="stylesheet" href="css/estilos_trabajos.css" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<style>
+	div#slide ul.fotuli li{
+	  width: 100%;
+	  height: 100%;
+	  background: url(img/marcos/fondo.jpg) no-repeat;
+	  background-size: cover;
+	  background-position: center;
+	  overflow: hidden;
+	}
+
+	div.chicos{
+		display: none;
+	}
+
+	    @media only screen and (max-width : 650px) {
+	    		div#slide ul.fotuli li{
+	  width: 100%;
+	  height: 100%;
+	  background: url(img/marcos/fondo-s.jpg) no-repeat;
+	  background-size: cover;
+	  background-position: center;
+	  overflow: hidden;
+	}
+	    	img#variable{
+	    		display:none;
+	    	}
+
+	    	div.chicos{
+	    		display: inline-block;
+	    	}
+	    }
+</style>
+
+
+
+</head>
+<body>
+	<div id="pantalla">
+	<div id="contenedor">
+
+		<header> <a name="#home"></a>
+			    <div class="clearfix">
+			        <a href="index.html#pantalla">
+				     <h1 id="logo"></h1>
+			    	</a>
+
+		            <nav>			        	
+		            <a class="cian" href="index.html#servicios">servicios.</a>
+		            <a class="magenta active" href="index.html#trabajos">trabajos.</a>
+		            <a class="amarillo" href="index.html#nosotros">nosotros.</a>
+		            <a class="negro" href="index.html#contacto">contacto.</a>
+			        </nav>
+
+				</div>
+		</header><!-- /header -->
+
+
+	<div id="slide">
+		<ul class="fotuli">
+			<li>
+				<img src="" alt="">
+			</li>
+		</ul>
+	</div>
+
+
+	<section>
+		<article id="trabajos">
+			<div class="barramagenta"></div>
+
+			<div class="portfolio">
+				<div id="titulo">
+					<h2>Afiches y marcos</h2>
+					<p>Diseños personalizados de afiches y marcos para vender.</p>
+				</div>				
+				
+				<img id="variable" src="img/marcos/marcos1.jpg" alt="Ilustración y diseño de gráfica para vender">
+				<div class="chicos">
+				<img src="img/marcos/marcos2.jpg" alt="Ilustración y diseño de gráfica para vender">
+				<img src="img/marcos/marcos3.jpg" alt="Ilustración y diseño de gráfica para vender">
+				<img src="img/marcos/marcos4.jpg" alt="Ilustración y diseño de gráfica para vender">					
+				</div>
+			</div>
+		</article>
+	</section>
+
+
+
+
+	<section>
+	<article class="barramedia">
+		<a href="https://www.facebook.com/brick.contenidoseditoriales/" target="_blank">
+			<img src="img/facebook-w.png" alt="venos en Facebook">
+		</a>
+		<a href="index.html#contacto">
+			<img src="img/mail-w.png" alt="contactanos">
+		</a>
+		<a href="https://plus.google.com/112973335242686944535/about" target="_blank">
+			<img src="img/google-w.png" alt="venos en Google+">
+		</a>
+		
+	</article>
+	</section>
+
+
+
+	<section>
+		<article>
+			<input type="radio" id="toogle1" class="toogleclass" name="prueba" value="mostrar">
+			<label for="toogle1" id="toogle" name="mostrar">
+				<div>
+					<img src="img/graficogris.png">
+					<img src="img/editorialgris.png">
+					<img src="img/webgris.png">
+					<p>VER MÁS TRABAJOS</p>
+				</div>						
+
+			</label>
+
+
+			<div class="menugrande">
+				<div class="menu">
+					<ul class="grafico">
+						<li class="minimenu"><img src="img/graficogris.png" alt="trabajos de diseño gráfico"></li>
+						<li><a href="frente_de_izquierda.html">Frente de Izquierda y de los Trabajadores</a></li>
+						<li><a href="praia.html">Praia o Muerte</a></li>
+						<li><a href="valeria_betancourt.html">Valeria Betancourt</a></li>
+						<li><a href="monoespacio.html">Mono espacio</a></li>
+						<li><a href="santi.html">Santi</a></li>
+						<li><a href="bauti.html">Bauti</a></li>
+						<li><a href="dimar.html">Distribuidora Dimar</a></li>
+						<li><a href="marion.html">Marion Gioda</a></li>
+						<li><a href="marcos.html">Cuadros y afiches</a></li>
+						<li><a href="la_bodeguita.html">La Bodeguita</a></li>
+						<li><a href="oleos_saber.html">Oleos Saber</a></li>
+						<li><a href="el_jardin_de_maria.html">El Jardín de María</a></li>
+					</ul>
+					<ul class="editorial">
+						<li class="minimenu"><img src="img/editorialgris.png" alt="trabajos de diseño editorial"></li>
+						<li><a href="fasciculos_san_martin.html">Fascículos San Martín</a></li>
+						<li><a href="vino_industria.html">Vino & su Industria</a></li>
+						<li><a href="libro_urps.html">Urps.:Tierras Cercanas:.</a></li>
+					</ul>
+					<ul class="web">
+						<li class="minimenu"><img src="img/webgris.png" alt="trabajos de diseño web"></li>
+						<li><a href="neurocirugia_mendoza.html">neurocirugiamendoza.com.ar</a></li>
+						<li><a href="centro_aparato_digestivo.html">aparatodigestivo.com.ar</a></li>
+						<li><a href="solidaridadxkm.html">solidaridadxkm.com.ar</a></li>
+						<li><a href="paseandogs.html">paseandogs.com.ar</a></li>
+					</ul>
+				</div>
+			</div>
+			
+		</article>
+	</section>
+
+
+
+					
+
+	</div> <!--cierra contenedor-->
+			
+<footer>
+	<div class="pie">
+		<div class="parrafo">
+			<p>Colón 430. 1° Piso. Oficina 15. Ciudad. Mendoza. Argentina.</p>
+			<img src="img/logo-footer.png" alt="Brick">
+		</div>
+	</div>
+</footer>
+			
+
+	
+</div> <!--cierra pantalla-->
+	
+
+<!-- loader-->
+<!--script>
+	$(window).load(function() {      //Do the code in the {}s when the window has loaded 
+  $("#loader").fadeOut("fast");  //Fade out the #loader div
+});
+</script-->
+
+<!-- nuevo smooth scrolling, veremos que tal-->
+<script src='js/smooth-scroll.js'></script>
+	<script>
+		smoothScroll.init({
+			speed: 1000,
+			easing: 'easeInOutCubic',
+			offset: 100,
+			updateURL: true,
+			callbackBefore: function ( toggle, anchor ) {},
+			callbackAfter: function ( toggle, anchor ) {}
+		});
+	</script>
+
+
+<!--achica header-->
+<script src="js/classie.js"></script>
+<script>
+    function init() {
+        window.addEventListener('scroll', function(e){
+            var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+                shrinkOn = 100,
+                header = document.querySelector("header");
+            if (distanceY > shrinkOn) {
+                classie.add(header,"smaller");
+            } else {
+                if (classie.has(header,"smaller")) {
+                    classie.remove(header,"smaller");
+                }
+            }
+        });
+    }
+    window.onload = init();
+</script>
+
+
+<!--cambiar de colores las a-->
+<script>
+	$(function() {
+   $("a").click(function() {
+      // remove classes from all
+      $("a").removeClass("active");
+      // add class to the one we clicked
+      $(this).addClass("active");
+   });
+});
+</script>
+
+</body>
+</html>

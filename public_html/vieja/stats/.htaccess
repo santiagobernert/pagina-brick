@@ -1,0 +1,7 @@
+AuthName "bricksg.com.ar statistics"
+AuthType Basic
+AuthUserFile /home/bricksg/.stats-htpasswd
+require valid-user
+<Files .stats-htpasswd>
+deny from all
+</Files>

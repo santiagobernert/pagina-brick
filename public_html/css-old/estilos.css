@@ -1,0 +1,1533 @@
+/*estructura de pantalla y contenedor*/
+#pantalla {
+width:100%;
+max-width: 100%;
+height:auto;
+position:relative;
+float:left;
+margin: 0px auto;
+padding: 0;
+background:url(../img/back.jpg);
+}
+
+#contenedor{
+	width: 1170px;
+  max-width: 90%;
+	height: auto;
+	position: relative;
+  margin: 0px auto;
+  padding: 0;
+  z-index: 90;
+ /* background-color: pink;*/
+}
+
+
+/*general del BODY*/
+html{
+  font-size: 10px;
+}
+
+body{
+	margin: 0px auto;
+	padding: 0px;
+	font-family: 'Roboto', sans-serif;
+	transition-duration: 2s;
+}
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+}
+
+
+/*slide*/
+div#slide{
+  width: 100%;
+  max-width: 100%;
+  height: 50rem;
+  position: fixed;
+  top:0;
+  left:0;
+  margin:0;
+  padding: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+div#slide ul.rslides{
+  width: 100%;
+  max-width: 100%;
+  height: 50rem;
+  list-style: none;
+  margin:0;
+  padding:0;
+}
+div#slide ul.rslides li{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+div#slide ul.rslides li img{
+  width: 100%;
+  height: auto;
+}
+/*slide gigante*/
+div.slidegigante ul.rslides li span{
+  width: 35rem;
+  height: 50rem;
+  background-color: red;
+  float:right;
+  position: absolute;
+  top:0;
+  right: 0;
+}
+div.slidegigante ul.rslides li span.grafico{
+  background: url(../img/graficoblanco.png);
+}
+div.slidegigante ul.rslides li span.editorial{
+  background: url(../img/editorialblanco.png);
+}
+div.slidegigante ul.rslides li span.web{
+  background: url(../img/webblanco.png);
+}
+
+
+
+
+/*header normal*/
+header {
+  width: 100%;
+  height: 50rem; /*405*/
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 9000;
+  -webkit-transition: height 0.3s;
+  -moz-transition: height 0.3s;
+  -ms-transition: height 0.3s;
+  -o-transition: height 0.3s;
+  transition: height 0.3s; 
+  }
+
+  .clearfix{
+    width: 100%;
+    height: 100%; /*300*/
+    position: relative;
+    margin: 0px auto;
+  }
+  header h1#logo {
+    display: inline-block;
+    width: 50%;
+    height: 60%;
+    float: left;
+    margin-left: 5px;
+    background: url(../img/logo-m-w.png) no-repeat;
+    background-size:  auto 100%;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; 
+  }
+
+
+  header nav {
+    display: inline-block;
+    float: right; 
+    background-color: black;
+    margin-top: 58rem;
+    height: 2.1rem;
+  }
+
+    header nav a {
+    text-decoration: none;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: gray;
+    font-size: 1.4rem;
+    font-family: 'Roboto', sans-serif;
+    -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s; 
+    }
+    
+    header nav a.cian:hover{
+      color: #009ee0; 
+    }
+
+    header nav a.magenta:hover{
+      color: #e2007a; 
+    }
+
+    header nav a.amarillo:hover{
+    color: #ffed00; 
+    }
+
+    header nav a.negro:hover{
+    color: #fff; 
+    }
+
+    header nav a.cian.active{
+      color: #009ee0; 
+      font-weight: 100;
+    }
+
+    header nav a.magenta.active{
+      color: #e2007a; 
+      font-weight: 100;
+    }
+
+    header nav a.amarillo.active{
+    color: #ffed00; 
+    font-weight: 100;
+    }
+
+    header nav a.negro.active{
+    color: #fff; 
+    font-weight: 100;
+    }
+    
+/*header chico*/
+  header.smaller {
+    width: 100%;
+    height: 100px; 
+    position: fixed;
+    padding-bottom: 10px;
+    background-color: #fff;
+    box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.5);
+  }
+
+  header.smaller .clearfix{
+    width: 1170px;
+    position: relative;
+    margin: 0px auto;
+    max-width: 90%;
+  }
+
+  header.smaller h1#logo{
+    width: 70%;
+    height: 90%;
+    background: url(../img/logo-m.png) no-repeat;
+    background-size:  auto 100%;
+  }
+  
+  header.smaller nav{
+    height: 30px;
+    margin-top: 87px;
+    background-color: black;
+    float: right;
+    display: inline-block;
+  }
+
+  header.smaller nav a{
+    font-size: 1.4rem;
+  }
+
+/*evita q tape al achicarse*/
+header.smaller~section article#servicios{
+  margin-top: 30rem;
+}
+header.smaller~div#slide{
+  opacity: 0;
+}
+
+
+/*todas las secciones*/
+section{
+  width: 100%;
+  height: auto;
+  margin:0px auto;
+  margin-bottom: 3rem;
+  background-color: white;
+}
+
+.barraceleste{
+  width: 100%;
+  height: 3rem;
+  background-color: #009ee0;
+}
+
+.barramagenta{
+  width: 100%;
+  height: 3rem;
+  background-color: #e2007a;
+}
+
+.barraamarilla{
+  width: 100%;
+  height: 3rem;
+  background-color: #ffed00;
+}
+
+.barranegra{
+  width: 100%;
+  height: 3rem;
+  background-color: black;
+}
+
+
+/*SERVICIOS*/
+#servicios{
+  height:auto;
+  padding-bottom: 5rem;
+  border-bottom: 1px dashed #009ee0;
+}
+
+#titulo{
+  width: 90%;
+  height: auto;
+  margin:0px auto;
+  padding-top:3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: #009ee0;
+}
+
+#titulo h2{
+  font-size: 3.2rem;
+  font-weight: 900;
+  font-style: black;
+}
+#titulo p{
+  width: 70%;
+  margin:0px auto;
+  font-size: 1.5rem;
+}
+
+
+.lostres{
+  width: 80%;
+  height: auto;
+  margin:0px auto;
+  text-align: center;
+}
+
+.treinta{
+  width: 25%;
+  height: auto;
+  margin-right: 3rem;
+  display: inline-block;
+  position: relative;
+  font-size: 1.3rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.treinta ul li{
+  margin-bottom: 0.5rem;
+  color:gray;
+}
+
+.treinta a{
+  text-decoration: none;
+  color:  gray;
+  margin-left: 1.5rem;
+}
+
+.treinta img{
+  width: auto;
+  height: 15rem;
+}
+
+
+
+
+/*TRABAJOS*/
+#trabajos{
+  height:auto;
+  padding-bottom: 5rem;
+  border-bottom: 1px dashed #e2007a;
+}
+
+#trabajos #titulo h2{
+  color:#e2007a;
+}
+
+article#trabajos div.editorial{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  text-align: center;
+}
+
+article#trabajos div.editorial a div.portfolio{
+  width: 25rem;
+  height: 25rem;
+  margin: 0.5rem;
+  display:inline-block;
+  border: 1px lightgray solid;
+  overflow: hidden;
+  transition-timing-function: cubic-bezier(0,0,0.58,1);
+  -webkit-transition: width 2s;
+  -o-transition: width 2s;
+  transition: width 2s;
+}
+
+article#trabajos div.editorial a div.portfolio:hover{
+  width: 30rem;
+  height: 25rem;
+}
+
+article#trabajos div.editorial a div.portfolio p{
+  width: 20rem;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  color:#fff;
+  font-size: 1.4rem;
+  text-align: left;
+  padding: 0.5rem;
+  margin-top: 75%;
+  opacity: 0;
+}
+
+article#trabajos div.editorial a div.portfolio:hover p{
+  opacity: 9;
+  -webkit-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+
+
+article#trabajos div.editorial h2{
+  margin-top: 4rem;
+}
+
+/*CLIENTES*/
+/*grafico*/
+article#trabajos div.editorial a div.fit{
+  background: url(../img/fit/fit.jpg) no-repeat;
+  background-size: 100% auto;
+  background-position: bottom;
+}
+
+article#trabajos div.editorial a div.cd{
+  background: url(../img/cd/cd.jpg) no-repeat;
+  background-size:  100% auto;
+  background-position: bottom;
+}
+
+article#trabajos div.editorial a div.vale{
+  background: url(../img/vale/vale.jpg) no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+article#trabajos div.editorial a div.piera{
+  background: url(../img/piera/piera.jpg) no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+article#trabajos div.editorial a div.santi{
+  background: url(../img/santi/santi.jpg) no-repeat;
+  background-size:  100% auto;
+  background-position: center;
+}
+article#trabajos div.editorial a div.bauti{
+  background: url(../img/bauti/bauti.jpg) no-repeat;
+  background-size:  100% auto;
+  background-position: center;
+}
+
+article#trabajos div.editorial a div.dimar{
+  background: url(../img/dimar/dimar.jpg) no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+article#trabajos div.editorial a div.marion{
+  background: url(../img/marion/marion.jpg) no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+article#trabajos div.editorial a div.marcos{
+  background: url(../img/marcos/marcos.jpg) no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+article#trabajos div.editorial a div.bodeguita{
+  background: url(../img/bodeguita/bodeguita.jpg) no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+article#trabajos div.editorial a div.oleos{
+  background: url(../img/oleos/oleos.jpg) no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+article#trabajos div.editorial a div.vivero{
+  background: url(../img/vivero/vivero.jpg) no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+/*editorial*/
+article#trabajos div.editorial a div.san_martin{
+  background: url(../img/san_martin/san_martin.jpg) no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+article#trabajos div.editorial a div.vino{
+  background: url(../img/vino/vino.jpg) no-repeat;
+  background-size:  100% auto;
+  background-position: center;
+}
+
+article#trabajos div.editorial a div.urps{
+  background: url(../img/urps/urps.jpg) no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+/*WEB*/
+article#trabajos div.editorial a div.neuro{
+  background: url(../img/neuro/neuro.jpg) no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+article#trabajos div.editorial a div.cad{
+  background: url(../img/cad/cad.jpg) no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+article#trabajos div.editorial a div.solidaridad{
+  background: url(../img/solidaridad/solidaridad.jpg) no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+article#trabajos div.editorial a div.paseandogs{
+  background: url(../img/paseandogs/paseandogs.jpg) no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+
+/*BARRA DEL MEDIO*/
+section article.barramedia{
+  width: 100%;
+  height: auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color:black;
+  text-align: center;
+}
+
+section article.barramedia a{
+  margin-right: 2rem;
+  text-decoration: none;
+}
+
+section article.barramedia a img{
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+}
+
+section article.barramedia a img:hover{
+  box-shadow: 0px 0px 120px lightblue;
+  transition-duration: 0.5s;
+}
+
+
+
+/*NOSOTROS*/
+#nosotros{
+  height:auto;
+  padding-bottom: 5rem;
+  border-bottom: 1px dashed #ffed00;
+  text-align: center;
+}
+
+#nosotros #titulo h2{
+  color: #ffed00;
+}
+
+section article#nosotros div.eugenio, section article#nosotros div.jimena{
+  width: 45%;
+  height: auto;
+  display: inline-block;
+  margin: 0rem 2rem;
+  vertical-align: top;
+}
+
+.foto50{
+  width: 50%;
+  height: 40rem;
+  float: left;
+  overflow: hidden;
+  margin-right: 0.5rem;
+  background-color: gray;
+}
+
+.foto25{
+  width: 48%;
+  height: 20rem;
+  float: right;
+  overflow: hidden;
+  background-color: gray;
+}
+
+.euge1{
+  background: url(../img/euge.jpg) no-repeat;
+}
+
+.euge2{
+  background: url(../img/euge2.jpg) no-repeat;
+}
+
+.jime1{
+  background: url(../img/jime.jpg) no-repeat;
+}
+
+.jime2{
+  background: url(../img/jime2.jpg) no-repeat;
+}
+
+.euge1, .euge2, .jime1, .jime2{
+  background-position: center;
+  background-size: cover;
+  border:1px lightgray solid;
+}
+
+.nombre{
+  float: right;
+  width: 48%;
+  height: auto;
+}
+
+.nombre img{
+  width: 100%;
+  height: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.nombre span.comilla{
+  height: 8rem;
+  float: left;
+}
+
+.nombre span.comilla img{
+  width: 3rem;
+  height: auto;
+  margin-top: -0.5rem;
+}
+
+.nombre h3{
+  font-size: 2rem;
+  text-align: left;
+}
+
+.nombre p{
+  width: 100%;
+  height: auto;
+  font-size: 1.4rem;
+  text-align: left;
+}
+
+
+
+
+
+
+
+
+/*CONTACTO*/
+#contacto{
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding-top: 3rem;
+  background-color: black;
+  padding-bottom: 50px;
+}
+
+#mapa{
+  width:85%;
+  height: 30rem;
+  margin: 0px auto;
+  margin-bottom: 4rem;
+  overflow: hidden;
+  border:10px solid white;
+}
+
+
+#formulario{
+  position: relative;
+  color: white;
+  width: 63%;
+  height: auto;
+  margin: 0px auto;
+  margin-top: 30px;
+  text-align: center;
+}
+
+#formulario img.sobre{
+  width: 20%;
+  height: auto;
+}
+
+
+#formulario h2{
+  font-size: 3.2rem;
+  font-weight: 900;
+  font-style: black;
+}
+
+#formulario h3{
+  width: 100%;
+  margin:0px auto;
+  font-size: 1.7rem;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+}
+
+#formulario h3 a{
+  text-decoration: none;
+  margin-top: 0px; 
+
+}
+
+#formulario h3 strong{
+  color:#009ee0;
+  font-size: 1.9rem;
+  font-style: black;
+}
+
+#formulario h4{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+  font-weight: 900;
+  font-family: 'Roboto', sans-serif;
+}
+
+#formulario p{
+  font-size: 13px;
+  margin:2px;
+}
+
+.face{
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+  margin:0px auto;
+  margin-bottom: 2rem;
+}
+
+.face a img{
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.face a img:hover{
+  box-shadow: 0px 0px 120px lightblue;
+  transition-duration: 0.5s;
+}
+
+fieldset{
+  width: 63%;
+  height: auto;
+  margin:0px auto;
+  border:0px;
+  color: #009ee0;
+}
+
+.input{
+  float: left;
+  position: relative;
+  width: 30%;
+  height: auto;
+  margin:0px;
+}
+
+fieldset .input input{
+  width: 100%;
+  height: 3rem;
+  font-size: 1.2rem;
+}
+
+fieldset textarea{
+  width: 67%;
+  height: 8rem;
+  float: right;
+  top:0px;
+  font-size: 1.2rem;
+}
+
+fieldset input.enviar{
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background-color: #009ee0;
+  background: url(../img/puntero.png) no-repeat;
+  background-size: 100%;
+  float: right;
+  position: absolute;
+  bottom: 7rem;
+  left: 72%;
+  z-index: 99;
+  border:0px;
+}
+
+.enviar:hover{
+  box-shadow: 0px 0px 100px black;
+  transition-duration: 0.5s;
+}
+
+
+
+/*FOOTER*/
+footer{
+  width: 100%;
+  height: 3.5rem;
+  clear:both;
+  background-color: #009ee0;
+  color: #fff;
+  margin:0;
+  padding: 0;
+}
+
+footer div.pie{
+  width: 1170px;
+  max-width: 90%;
+  margin:0px auto;
+  position: relative;
+}
+
+footer .parrafo{
+  width: 100%;
+  height: 3.5rem;
+  overflow: hidden;
+}
+
+footer .parrafo p{
+  font-size: 1.5rem;
+  font-family: 'roboto';
+  font-style: thin;
+  margin: 1.2rem;
+  float: left;
+}
+
+footer .parrafo img{
+  float: right;
+  position: relative;
+  width: auto;
+  height: 3.5rem;
+}
+
+
+
+/*DISPLAT DEL SLIDE CHICO*/
+      div.slidechico{
+        display: none;
+      }
+      div.slidenormal{
+        display: none;
+      }
+      div.slidegigante{
+        display: initial;
+      }
+
+
+
+    @media only screen and (max-width : 1170px) {
+      /*header .clearfix{
+        background-color: rgba(200,130,3,0.5);
+      }*/
+
+    }
+
+
+
+
+
+
+
+
+    @media only screen and (max-width : 1130px) {
+        /*header .clearfix{
+        background-color: rgba(155,155,100,0.5);
+      }*/
+
+      div.slidegigante{
+        display: none;
+      }
+      div.slidechico{
+        display: none;
+      }
+      div.slidenormal{
+        display: initial;
+      }
+
+
+      div#slide ul.rslides li{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+      div#slide ul.rslides li img{
+        width: auto;
+        height: 100%;
+        float:right;
+      }
+
+
+
+      header.smaller h1#logo{
+        width: 30%;
+        height: 90%;
+        background: url(../img/logo-m.png) no-repeat;
+        background-size:  auto 100%;
+      }
+      
+      header.smaller nav{
+        height: 30px;
+        margin-top: 85px;
+        background-color: black;
+        float: right;
+        display: inline-block;
+      }
+
+      header.smaller nav a{
+        font-size: 1.4rem;
+      }
+
+
+        
+
+
+
+
+      .foto50{
+          width: 45%;
+          height: 40rem;
+          float: left;
+          overflow: hidden;
+          margin-right: 0.5rem;
+        }
+
+        .foto25{
+          width: 48%;
+          height: 20rem;
+          float: right;
+          overflow: hidden;
+        }
+
+        section article#nosotros div.eugenio, section article#nosotros div.jimena{
+          width: 40%;
+          height: auto;
+          display: inline-block;
+          margin: 0rem 2rem;
+          vertical-align: top;
+        }
+
+
+          footer div.pie{
+            width: 1170px;
+            max-width: 90%;
+            margin:0px auto;
+            position: relative;
+          }
+
+          footer .parrafo{
+            width: 100%;
+            height: 3.5rem;
+            overflow: hidden;
+          }
+
+          footer .parrafo p{
+            font-size: 1.4rem;
+            font-family: 'roboto';
+            font-style: thin;
+            margin: 0.8rem;
+            float: left;
+          }
+
+          footer .parrafo img{
+            float: right;
+            position: relative;
+            width: auto;
+            height: 3rem;
+          }
+
+
+
+
+    }
+
+
+/*ESTO ES SOLO PARA LA SECCION NOSOTROS*/
+ @media only screen and (max-width : 1040px){
+
+    section article#nosotros div.eugenio, section article#nosotros div.jimena{
+        width: 90%;
+        height: auto;
+        display: inline-block;
+        margin: 0rem 2rem;
+        margin-bottom: 20px;
+        vertical-align: top;
+      }
+
+        .foto50{
+          width: 50%;
+          height: 60rem;
+          float: left;
+          overflow: hidden;
+          margin-right: 0.5rem;
+        }
+
+        .foto25{
+          width: 48%;
+          height: 30rem;
+          float: right;
+          overflow: hidden;
+        }
+
+        .nombre{
+          text-align: left;
+        }
+
+        .nombre img{
+          width: 60%;
+          height: auto;
+          margin-top: 2rem;
+          margin-bottom: 2rem;
+        }
+
+}
+
+
+
+    /* Small Devices, Tablets */
+    @media only screen and (max-width : 768px) {
+   /* header .clearfix{
+        background-color: rgba(190,100,100,0.5);
+      }*/
+
+
+      div#slide{
+        width: 100%;
+        max-width: 100%;
+        height: 35rem;
+        position: fixed;
+        top:0;
+        left:0;
+        margin:0;
+        padding: 0;
+        overflow: hidden;
+        z-index: -1;
+      }
+
+      div#slide ul.rslides{
+        width: 100%;
+        max-width: 100%;
+        height: 35rem;
+        list-style: none;
+        margin:0;
+        padding:0;
+      }
+      div#slide ul.rslides li{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+      div#slide ul.rslides li img{
+        width: auto;
+        height: 100%;
+        float: right;
+      }
+
+
+        header{
+          width: 100%;
+          height: 35rem;
+          margin:0px auto;
+          padding: 0;
+          overflow: hidden;
+          z-index: 1;
+        }
+
+
+      #titulo h2{
+        font-size: 2.8rem;
+      }
+
+      #titulo p{
+        width: 80%;
+        margin:0px auto;
+        font-size: 1.4rem;
+      }
+
+
+      .lostres{
+        width: 100%;
+        height: auto;
+        margin:0px auto;
+        text-align: center;
+      }
+
+      .treinta{
+        width: 30%;
+        height: auto;
+        margin-right: 1rem;
+        display: inline-block;
+        position: relative;
+        font-size: 1.3rem;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      .treinta ul li{
+        margin-bottom: 0.5rem;
+        color:gray;
+      }
+
+      .treinta a{
+        text-decoration: none;
+        color:  gray;
+        margin-left: 1.5rem;
+      }
+
+      .treinta img{
+        width: auto;
+        height: 12rem;
+      }
+
+
+      section article#nosotros div.eugenio, section article#nosotros div.jimena{
+        width: 90%;
+        height: auto;
+        display: inline-block;
+        margin: 0rem 2rem;
+        margin-bottom: 20px;
+        vertical-align: top;
+      }
+
+
+        .foto50{
+          width: 47%;
+          height: 40rem;
+          float: left;
+          overflow: hidden;
+          margin-right: 0.5rem;
+        }
+
+        .foto25{
+          width: 48%;
+          height: 20rem;
+          float: right;
+          overflow: hidden;
+        }
+
+        #mapa{
+          width:85%;
+          height: 25rem;
+          margin: 0px auto;
+          margin-bottom: 4rem;
+          overflow: hidden;
+          border:5px solid white;
+        }
+
+
+      #formulario{
+        position: relative;
+        color: white;
+        width: 95%;
+        height: auto;
+        margin: 0px auto;
+        margin-top: 30px;
+        text-align: center;
+      }
+
+      #formulario img.sobre{
+        width: 30%;
+        height: auto;
+      }
+
+      #formulario h2{
+        font-size: 2.4rem;
+        font-weight: 800;
+        font-style: black;
+      }
+
+      #formulario h3{
+        width: 100%;
+        margin:0px auto;
+        font-size: 1.4rem;
+        font-weight: 400;
+        font-family: 'Roboto', sans-serif;
+      }
+
+    #formulario h3 a{
+      text-decoration: none;
+      margin-top: 0px; 
+    }
+
+    #formulario h3 strong{
+      color:#009ee0;
+      font-size: 1.4rem;
+      font-style: black;
+    }
+
+    #formulario h4{
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      font-weight: 800;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    #formulario p{
+      font-size: 1.3rem;
+      margin:2px;
+    }
+
+    fieldset{
+      width: 85%;
+      height: auto;
+      margin:0px auto;
+      border:0px;
+      color: #009ee0;
+    }
+
+    .input{
+      float: left;
+      position: relative;
+      width: 100%;
+      height: auto;
+      margin:0px;
+    }
+
+    fieldset .input input{
+      width: 100%;
+      height: 3rem;
+      font-size: 1.2rem;
+    }
+
+    fieldset textarea{
+      width: 100%;
+      height: 8rem;
+      float: left;
+      border:0;
+      font-size: 1.2rem;
+      margin-top: 1.2rem;
+    }
+
+    fieldset input.enviar{
+      width: 6rem;
+      height: 6rem;
+      border-radius: 50%;
+      background-color: #009ee0;
+      background: url(../img/puntero.png) no-repeat;
+      background-size: 100%;
+      float: right;
+      position: absolute;
+      bottom: 7rem;
+      left: 72%;
+      z-index: 99;
+      border:0px;
+    }
+
+    .enviar:hover{
+      box-shadow: 0px 0px 100px black;
+      transition-duration: 0.5s;
+    }
+
+        footer{
+          height: auto;
+        }
+          footer div.pie{
+            width: 1170px;
+            max-width: 90%;
+            margin:0px auto;
+            position: relative;
+          }
+
+          footer .parrafo{
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+          }
+
+          footer .parrafo p{
+            font-size: 1.3rem;
+            font-family: 'roboto';
+            font-style: thin;
+            margin: 0rem;
+            margin-top: 0.5rem;
+            float: left;
+          }
+
+          footer .parrafo img{
+            float: left;
+            position: relative;
+            width: auto;
+            height: 3rem;
+          }
+
+
+
+
+
+
+
+
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (max-width : 480px) {
+     /* header .clearfix{
+        background-color: rgba(0,0,0,0.5);
+      }*/
+      div.slidegigante{
+        display: none;
+      }
+      div.slidenormal{
+        display: none;
+      }
+      div.slidechico{
+        display: initial;
+      }
+
+      div#slide{
+        width: 100%;
+        max-width: 100%;
+        height: 20rem;
+        position: fixed;
+        top:0;
+        left:0;
+        margin:0;
+        padding: 0;
+        overflow: hidden;
+        z-index: -1;
+      }
+
+      div#slide ul.rslides{
+        width: 100%;
+        max-width: 100%;
+        height: 20rem;
+        list-style: none;
+        margin:0;
+        padding:0;
+      }
+      div#slide ul.rslides li{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+      div#slide ul.rslides li img{
+        width: auto;
+        height: 100%;
+        float: right;
+      }
+
+
+        header{
+          width: 100%;
+          height: 20rem;
+          margin:0px auto;
+          padding: 0;
+          overflow: hidden;
+          z-index: 1;
+        }
+
+      header.smaller{
+        height: 10rem;
+      }
+
+
+
+      header.smaller h1#logo{
+        width: 100%;
+        height: 78%;
+        background: url(../img/logo-m.png) no-repeat;
+        background-size:  auto 100%;
+      }
+      
+      header.smaller nav{
+        height: 20px;
+        margin-top: -12px;
+        background-color: black;
+        float: right;
+        display: inline-block;
+      }
+
+      header.smaller nav a{
+        font-size: 1.1rem;
+      }
+
+
+
+
+
+      #titulo h2{
+        font-size: 2.4rem;
+      }
+
+      #titulo p{
+        width: 80%;
+        margin:0px auto;
+        font-size: 1.2rem;
+      }
+
+
+      .lostres{
+        width: 55%;
+        height: auto;
+        margin:0px auto;
+        text-align: center;
+        margin-left: 28%;
+      }
+
+      .treinta{
+        width: 100%;
+        height: auto;
+        margin-right: 1rem;
+        margin-bottom: 3rem;
+        display: inline-block;
+        position: relative;
+        font-size: 1.3rem;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      .treinta ul li{
+        margin-bottom: 0.5rem;
+        color:gray;
+      }
+
+      .treinta a{
+        text-decoration: none;
+        color:  gray;
+        margin-left: 1.5rem;
+      }
+
+      .treinta img{
+        width: auto;
+        height: 12rem;
+      }
+
+
+
+      .foto50{
+          display: none;
+        }
+
+        .foto25{
+          width: 90%;
+          height: 20rem;
+          float: left;
+          overflow: hidden;
+        }
+
+        .nombre{
+          float: left;
+          width: 80%;
+          height: auto;
+          text-align: left;
+        }
+
+        .nombre img{
+          width: 60%;
+          height: auto;
+          margin-top: 2rem;
+          margin-bottom: 2rem;
+        }
+
+        .nombre span.comilla{
+          height: 8rem;
+          float: left;
+        }
+
+        .nombre span.comilla img{
+          width: 3rem;
+          height: auto;
+          margin-top: -0.5rem;
+        }
+
+        .nombre h3{
+          font-size: 2rem;
+          text-align: left;
+        }
+
+        .nombre p{
+          width: 100%;
+          height: auto;
+          font-size: 1.4rem;
+          text-align: left;
+        }
+
+        #mapa{
+          width:85%;
+          height: 20rem;
+          margin: 0px auto;
+          margin-bottom: 4rem;
+          overflow: hidden;
+          border:5px solid white;
+        }
+
+        #mapa iframe{
+          height: 20rem;
+        }
+
+    }
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (max-width : 320px) {
+     /*header .clearfix{
+        background-color: rgba(50, 255, 100, 0.5);
+      }*/
+
+
+     .nombre img{
+        width: 100%;
+        height: auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+        .nombre h3{
+          font-size: 1.8rem;
+          text-align: left;
+        }
+
+        .nombre p{
+          width: 100%;
+          height: auto;
+          font-size: 1.2rem;
+          text-align: left;
+        }
+
+      article#trabajos div.editorial a div.portfolio{
+        width: 24rem;
+        height: 24rem;
+        margin: 0.5rem;
+        display:inline-block;
+        border: 1px lightgray solid;
+        overflow: hidden;
+        background-size: auto 100%;
+        transition-timing-function: cubic-bezier(0,0,0.58,1);
+        -webkit-transition: height 2s;
+        -o-transition: height 2s;
+        transition: height 2s;
+      }
+
+      article#trabajos div.editorial a div.portfolio:hover{
+        width: 24rem;
+        height: 26rem;
+      }
+
+
+    }
