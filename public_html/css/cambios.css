@@ -105,6 +105,12 @@ footer div.container div.row div.col-md-2:last-of-type{
   text-align: right;
 }
 
+@media(max-width: 768px){
+  footer div.container div.row div.col-md-2:last-of-type{
+    text-align: center;
+  }
+}
+
 footer .logo-ft{
   margin-top: 0;
 }
