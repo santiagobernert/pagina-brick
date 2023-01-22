@@ -256,6 +256,12 @@ bootstrap.min.css:5
 	background-attachment: fixed;
 }
 
+@media (max-width: 768px){
+	#about {
+		padding-bottom: 4vh;
+	}
+}
+
 #about .service-item {
 	text-align: center;
 }
@@ -304,7 +310,7 @@ bootstrap.min.css:5
 	padding: 30px 15px 0px 15px;
 }
 
-.filter-categories {;
+.filter-categories {
   margin-top: 60px;
 }
 

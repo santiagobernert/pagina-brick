@@ -23,6 +23,7 @@
   width: 220px !important;
   background-color: white;
   transition: .3s !important;
+  margin-bottom: 5rem;
 }
 
 .primary-white-button a:hover,
