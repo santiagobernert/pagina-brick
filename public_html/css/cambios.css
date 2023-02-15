@@ -43,6 +43,11 @@
   color:#4D4D4D;
 }
 
+.filter span img{
+  margin: 0 .7rem;
+  width: 1vw;
+}
+
 .baner-content .text-content h2 em.logo{
   font-size: 100px;
 }
